@@ -17,3 +17,13 @@ email.addEventListener('input', function() {
     else 
         email_error.textContent = "Email is incorrect"
 });
+
+const tel = document.querySelector('#tel');
+const tel_error = document.querySelector('.tel-error');
+tel.addEventListener('input', function() {
+    let telRegex = RegExp('^([0-9]{2}\\s)[0-9]{10}$');
+    if(telRegex.test(tel.value))
+        tel_error.textContent = "";
+    else 
+        tel_error.textContent = "Phone number is incorrect"
+});

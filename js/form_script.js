@@ -27,3 +27,13 @@ tel.addEventListener('input', function() {
     else 
         tel_error.textContent = "Phone number is incorrect"
 });
+
+const pwd = document.querySelector('#pwd');
+const pwd_error = document.querySelector('.pwd-error');
+pwd.addEventListener('input', function() {
+    let pwdRegex = RegExp('^(?=.*[A-Z])(?=.*[0-9])(?=.{8,})[0-9a-zA-Z]*[^0-9a-zA-Z][0-9a-zA-Z]*$');
+    if(pwdRegex.test(pwd.value))
+        pwd_error.textContent = "";
+    else 
+        pwd_error.textContent = "Password is incorrect"
+});

@@ -7,6 +7,13 @@ text.addEventListener('input', function(){
     else
         textError.textContent ="Name is incorrect";
 });
+
+const salary = document.querySelector('#salary');
+const salary_output = document.querySelector('.salary-output');
+salary_output.textContent = salary.value;
+salary.addEventListener('input',function() {
+    salary_output.textContent = salary.value;
+});
             
 const email = document.querySelector('#email');
 const email_error = document.querySelector('.email-error');
